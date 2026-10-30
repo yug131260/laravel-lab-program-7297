@@ -1,0 +1,17 @@
+LAB WORK 4 - Blade Template Inheritance (Dynamic Theme)
+
+STEP 1: Is zip ke folders (app, config, public, resources, routes) apne Laravel project me copy karo.
+        "Replace files?" pooche to YES.
+STEP 2: Project folder me terminal kholo:
+            php artisan config:clear
+            php artisan serve
+STEP 3: Browser me kholo:  http://127.0.0.1:8000
+        (Database ya migrate ki zarurat NAHI hai.)
+
+FILES KA MATLAB
+  resources/views/layouts/master.blade.php   -> MASTER layout (@yield yahan hain)
+  resources/views/partials/header|sidebar    -> @include wale reusable parts
+  resources/views/pages/*.blade.php          -> child pages (@extends + @section)
+  config/theme.php                           -> site naam, menu, theme colours
+  public/assets/css/main.css, js/main.js     -> Editorial style theme
+  routes/web.php, PageController.php         -> pages aur theme colour change
